@@ -1,8 +1,10 @@
 # Ignore system files
 .DS_Store
+.vscode
 
 # Ignore build results
 build/
+project/
 
 # Ignore sublime-project file
 *.sublime-project

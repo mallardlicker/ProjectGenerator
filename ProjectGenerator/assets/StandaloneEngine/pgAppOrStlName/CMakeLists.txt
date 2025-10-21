@@ -25,11 +25,15 @@ file(	GLOB_RECURSE PGAPPORSTLNAME_HEADER_FILES
     ${PGAPPORSTLNAME_SOURCE_DIR}/include/*.h
 )
 
-# must update the include directories manually so far
-set(pgAppOrStlName_INCLUDE_DIRS
-    "${PGAPPORSTLNAME_SOURCE_DIR}/include"
-    # "${PGAPPORSTLNAME_SOURCE_DIR}/include/core"
-)
+set(pgAppOrStlName_INCLUDE_DIRS "${PGAPPORSTLNAME_SOURCE_DIR}/include")
+
+# Automatically add all subdirectories within include/
+file(GLOB INCLUDE_SUBDIRS LIST_DIRECTORIES true "${PGAPPORSTLNAME_SOURCE_DIR}/include/*")
+foreach(SUBDIR ${INCLUDE_SUBDIRS})
+    if(IS_DIRECTORY ${SUBDIR})
+        list(APPEND pgAppOrStlName_INCLUDE_DIRS ${SUBDIR})
+    endif()
+endforeach()
 
 
 # ==================================================================================================

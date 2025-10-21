@@ -1,7 +1,7 @@
 // main.cpp
 // Author: Justin Bunting
 // Created: 2024/08/06
-// Last Modified: 2025/10/06 14:21
+// Last Modified: 2025/10/21 15:56
 
 #include <string>
 #include <sstream>
@@ -30,12 +30,15 @@
 
 // static int TEXTWIDTH = 100;
 static std::string TITLE = "Project Generator"; 
+
 // TODO: add MacOS Application types: 
 // 1. implement new Enums/datastructures/generation and terms DONE
 // 2. actually modify CMakeList.txt's and add the two new types DONE
-//		--> the Application types will need a basic GLFW Window setup 
-//		--> debug text output appears when run from terminal
-//		--> should everything utilize CppUtils' text outputting? This would ensure that debug text is properly handled
+//		--> the Application types will need a basic GLFW Window setup DONE
+//		--> text output appears when run from terminal YES
+//		--> should everything utilize CppUtils' text outputting? This would ensure that debug text is properly handled YES
+// Application -> Done? --> Testing... Done.
+// Application & Engine -> 
 
 // TODO: test generation of Windows .exe's in application generation
 
